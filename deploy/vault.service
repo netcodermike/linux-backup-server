@@ -1,0 +1,18 @@
+[Unit]
+Description=Encrypted backup vault
+After=network.target
+[Service]
+User=vault
+Group=vault
+WorkingDirectory=/var/lib/vault
+EnvironmentFile=/etc/vault.env
+ExecStart=/usr/local/bin/vault serve
+Restart=on-failure
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/vault
+UMask=0077
+[Install]
+WantedBy=multi-user.target

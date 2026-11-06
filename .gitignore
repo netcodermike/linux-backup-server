@@ -1,0 +1,29 @@
+# Local secrets and runtime data
+.env
+*.env
+!*.env.example
+local.properties
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+.time-machine/
+data/
+progress.properties
+*.wav
+planet.svg
+# Build tools
+build/
+bin/
+obj/
+target/
+.build/
+.swiftpm/
+.gradle/
+.idea/
+node_modules/
+sandbox
+probe
+vault
+vault.exe
+*.class
